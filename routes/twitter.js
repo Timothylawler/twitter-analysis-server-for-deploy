@@ -5,7 +5,7 @@ const request = require('request');
 const Twitter = require('twitter');
 const async = require('async');
 
-const BASEURL = "https://webservice-server.herokuapp.com/"
+const BASEURL = "https://webservice-server.herokuapp.com/";
 
 const keys = {
 	consumer : "KaAdZOT3aeqe0MObfa5S9OtaO",
@@ -363,9 +363,10 @@ function analyseSentiment(data){
 	const params = {
 		text : data
 	};
+	let self = this;
 	return new Promise(function(fulfill, reject){
 		try{
-			request.get({url:BASEURL + "/aylien/sentiment", qs: params}, function(error, response, data){
+			request.get({url: "https://webservice-server.herokuapp.com/aylien/sentiment", qs: params}, function(error, response, data){
 				//console.log("Error: ", error);
 				//console.log("Response: ", response);
 				//console.log("Data: ", data);
@@ -389,9 +390,10 @@ function extractEntities(data){
 	const params = {
 		text: data
 	};
+	let self = this;
 	return new Promise(function(fulfill, reject){
 		try{
-			request.get({url: BASEURL + "/aylien/entities", qs: params}, function(error, response, data){
+			request.get({url: "https://webservice-server.herokuapp.com/aylien/entities", qs: params}, function(error, response, data){
 				if(error){
 					reject({status:"400", data: error});
 				} else {
