@@ -391,7 +391,7 @@ function extractEntities(data){
 	};
 	return new Promise(function(fulfill, reject){
 		try{
-			request.get({url: BASEURL "/aylien/entities", qs: params}, function(error, response, data){
+			request.get({url: BASEURL + "/aylien/entities", qs: params}, function(error, response, data){
 				if(error){
 					reject({status:"400", data: error});
 				} else {
