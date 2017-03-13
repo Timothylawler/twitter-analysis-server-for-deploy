@@ -4,7 +4,8 @@
   "description": "mashup",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node app.js"
   },
   "author": "",
   "license": "ISC",
@@ -18,7 +19,7 @@
     "twitter": "^1.7.0",
     "unfluff": "^1.1.0"
   },
-	"scripts": {
-  "start": "node app.js"
+	"engines": {
+  	"node" : "6.9.5"
 	}
 }
