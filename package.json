@@ -17,5 +17,8 @@
     "request": "^2.79.0",
     "twitter": "^1.7.0",
     "unfluff": "^1.1.0"
-  }
+  },
+	"scripts": {
+  "start": "node app.js"
+	}
 }
